@@ -1,0 +1,28 @@
+    <html>
+    <head>
+        <meta http-equiv="content-type" content="text/html";chatset="UTF-8" />
+        <title>DevOps</title>
+    </head>
+    <body>
+
+    <p style="background-color:blue;">hello Django</p>
+
+    <p> {{ aa }} </p>
+
+    <li>{{ books.0 }}</li>
+    <li>{{ books.1 }}</li>
+    <li>{{ books.2 }}</li>
+
+    <div color = blue>hello my name is {{ user.name }} </br>
+        my age is {{ user.age }}
+    </div>
+
+    {# for循环输出列表嵌套字典数据 #}
+    {% for user in userlist %}
+    <li>{{ user.name }}-->{{ user.age }}</li>
+    {% endfor %}
+
+    </body>
+    </html>
+
+

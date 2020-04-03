@@ -1,0 +1,47 @@
+<!-- 继承⺟版不变的部分 -->
+{% extends "base.html" %}
+<!-- 重写⺟版变的部分-->
+{% block title %} ⽤户的列表 {% endblock %}
+<!-- 重写⺟版变的部分-->
+{% block content %}
+<table border="1">
+    <thead>
+     <tr>
+         <th>⽤户名</th>
+         <th>姓名</th>
+         <th>年龄</th>
+         <th>性别</th>
+         <th>管理</th>
+
+         <a id="is" href="http://39.105.46.37:8001/hello/list/">新增用户</a>
+
+     </tr>
+     </thead>
+     <tbody>
+     <!--<button type="button">添加</button>-->
+     <!--<button type="button">删除</button>-->
+     <!--<button type="button">修改</button>-->
+     <!--<button type="button">查询</button>-->
+     <!--<input type="button" value="提交" onClick="location.href='目标路径'"/>-->
+     <!--<input type="button" value="删除" onClick="location.href='目标路径'"/>-->
+     <!--<input type="button" value="修改" onClick="location.href='目标路径'"/>-->
+     <!--<input type="button" value="查询"  id="shanchu" onClick="location.href='目标路径'"/>-->
+         {% for user in users %}
+          <tr>
+                 <td>{{ user.username }}</td>
+                 <td>{{ user.name_cn }}</td>
+                 <td>{{ user.age }}</td>
+                 <td>{{ user.sex }}</td>
+                 <td>
+                     <a href="http://39.105.46.37:8001/hello/list/">删除</a>
+                     <a href="http://39.105.46.37:8001/hello/list/">修改</a>
+                     <a href="http://39.105.46.37:8001/hello/list/">查询</a>
+                 </td>
+
+
+   
+          </tr>
+            {% endfor %}
+    </tbody>
+    </table>
+    {% endblock %}
